@@ -53,6 +53,6 @@ tasks.withType(Test) {
 
 task landingTests(type: Test) {
     useJUnitPlatform {
-        includeTags("Главная страница")
+        includeTags("landingTests")
     }
 }

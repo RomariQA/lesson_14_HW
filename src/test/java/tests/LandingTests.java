@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.Landing;
 
-@Tag("Главная страница")
+@Tag("landingTests")
 public class LandingTests extends TestBase {
 
     Landing landing = new Landing();
