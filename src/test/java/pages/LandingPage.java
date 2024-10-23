@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class Landing {
+public class LandingPage {
 
     public String about = "О КОМПАНИИ",
             news = "НОВОСТИ",
@@ -37,91 +37,91 @@ public class Landing {
                             vkButton = $(byAttribute("href", "https://vk.com/usetech_pro"));
 
     @Step("Открыть главную страницу ленда")
-    public Landing openPage() {
+    public LandingPage openPage() {
         open("/");
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку О КОМПАНИИ")
-    public Landing nawMenuAboutCheck() {
+    public LandingPage nawMenuAboutCheck() {
         aboutMenuButton.shouldHave(text(about));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку НОВОСТИ")
-    public Landing nawMenuNewsCheck() {
+    public LandingPage nawMenuNewsCheck() {
         newsMenuButton.shouldHave(text(news));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку УСЛУГИ")
-    public Landing nawMenuServicesCheck() {
+    public LandingPage nawMenuServicesCheck() {
         servicesMenuButton.shouldHave(text(services));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку ОТРАСЛИ")
-    public Landing nawMenuIndustriesCheck() {
+    public LandingPage nawMenuIndustriesCheck() {
         industriesMenuButton.shouldHave(text(industries));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку НАГРАДЫ")
-    public Landing nawMenuAwardsCheck() {
+    public LandingPage nawMenuAwardsCheck() {
         awardsMenuButton.shouldHave(text(awards));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку КОНТАКТЫ")
-    public Landing nawMenuContactsCheck() {
+    public LandingPage nawMenuContactsCheck() {
         contactsMenuButton.shouldHave(text(contacts));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку КАРЬЕРА")
-    public Landing nawMenuCareerCheck() {
+    public LandingPage nawMenuCareerCheck() {
         careerMenuButton.shouldHave(text(career));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку ПРОДУКТЫ")
-    public Landing nawMenuProductsCheck() {
+    public LandingPage nawMenuProductsCheck() {
         productsMenuButton.shouldHave(text(products));
 
         return this;
     }
 
     @Step("Меню навигации содержит кнопку HABR БЛОГ")
-    public Landing nawMenuHabrCheck() {
+    public LandingPage nawMenuHabrCheck() {
         habrMenuButton.shouldHave(text(habr));
 
         return this;
     }
 
     @Step("Клик на кнопку НОВОСТИ в меню навигации")
-    public Landing newsButtonClick(){
+    public LandingPage newsButtonClick(){
         newsMenuButton.click();
 
         return this;
     }
 
     @Step ("Кнопка окрашена в салатовый цвет")
-    public Landing activeMenuButtonColor(){
+    public LandingPage activeMenuButtonColor(){
         newsMenuButton.shouldHave(cssValue("color", "rgba(33, 37, 41, 1)"));
 
         return this;
     }
 
     @Step("Клик на кнопку КАРЬЕРА")
-    public Landing careerButtonClick(){
+    public LandingPage careerButtonClick(){
         careerMenuButton.click();
 
         return this;
@@ -130,35 +130,35 @@ public class Landing {
 
 
     @Step("Проскролить до блока УСЛУГИ на главной")
-    public Landing scrollToServicesBlock(){
+    public LandingPage scrollToServicesBlock(){
         servicesBlock.scrollTo();
 
         return this;
     }
 
     @Step("Кнопка Подробнее кликабельна")
-    public Landing moreServicesButtonClickableCheck(){
+    public LandingPage moreServicesButtonClickableCheck(){
         moreButtonOnservicesBlock.shouldBe(clickable);
 
         return this;
     }
 
     @Step("Скролл до лого футера")
-    public Landing scrollToFuter(){
+    public LandingPage scrollToFuter(){
         futerLogo.scrollTo();
 
         return this;
     }
 
     @Step("Футер содержит ссылку на телеграм")
-    public  Landing telegramLinkCheck(){
+    public LandingPage telegramLinkCheck(){
         telegramButton.shouldBe(clickable);
 
         return this;
     }
 
     @Step("Футер содержит ссылку на VK")
-    public  Landing vkLinkCheck(){
+    public LandingPage vkLinkCheck(){
         vkButton.shouldBe(clickable);
 
         return this;

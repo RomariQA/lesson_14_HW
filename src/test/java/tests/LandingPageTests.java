@@ -3,19 +3,19 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.Career;
-import pages.Landing;
+import pages.CareerPage;
+import pages.LandingPage;
 
 @Tag("landingTests")
-public class LandingTests extends TestBase {
+public class LandingPageTests extends TestBase {
 
-    Landing landing = new Landing();
-    Career career  = new Career();
+    LandingPage landingPage = new LandingPage();
+    CareerPage careerPage = new CareerPage();
 
     @DisplayName("Названия кнопок навигации соответствуют документации")
     @Test
     void navigationMenuTest () {
-        landing.nawMenuAboutCheck()
+        landingPage.nawMenuAboutCheck()
                 .nawMenuNewsCheck()
                 .nawMenuServicesCheck()
                 .nawMenuIndustriesCheck()
@@ -29,28 +29,28 @@ public class LandingTests extends TestBase {
     @DisplayName("Активная кнопка меню НОВОСТИ окрашена в салатовый цвет")
     @Test
     void buttonMenuColorTest(){
-        landing.newsButtonClick()
+        landingPage.newsButtonClick()
                 .activeMenuButtonColor();
     }
 
     @DisplayName("Клик на кнопку меню КАРЬЕРА открывает страницу с поиском вакансий")
     @Test
     void clickOnMenuCareerButtonTest(){
-        landing.careerButtonClick();
-        career.careerPageOpenCheck();
+        landingPage.careerButtonClick();
+        careerPage.careerPageOpenCheck();
     }
 
     @DisplayName("В блоке услуг кнопка Подробнее кликабельна")
     @Test
     void moreButtonClickableTest(){
-        landing.scrollToServicesBlock()
+        landingPage.scrollToServicesBlock()
                 .moreServicesButtonClickableCheck();
     }
 
     @DisplayName("Подвал должен содержать ссылки соц сетей")
     @Test
     void  futerSocialMediaLinksTest(){
-        landing.scrollToFuter()
+        landingPage.scrollToFuter()
                 .telegramLinkCheck()
                 .vkLinkCheck();
     }

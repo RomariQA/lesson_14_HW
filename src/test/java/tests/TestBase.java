@@ -8,7 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.Landing;
+import pages.LandingPage;
 
 import java.util.Map;
 
@@ -39,8 +39,8 @@ public class TestBase {
 
     @BeforeEach
     void openPage(){
-        Landing landing = new Landing();
-        landing.openPage();
+        LandingPage landingPage = new LandingPage();
+        landingPage.openPage();
     }
 
     @AfterEach
