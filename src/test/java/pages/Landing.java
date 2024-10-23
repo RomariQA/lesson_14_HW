@@ -30,7 +30,6 @@ public class Landing {
                             careerMenuButton = $("#menu-item-14"),
                             productsMenuButton = $("#menu-item-1081"),
                             habrMenuButton = $("#menu-item-133"),
-                            careerPageFilterClass = $(".home-filter__left"),
                             servicesBlock = $("#sectionTitle-"),
                             moreButtonOnservicesBlock = $(".btn.btn-outline-white.btn-pill.mb-5"),
                             futerLogo = $("#footerLogo"),
@@ -128,12 +127,7 @@ public class Landing {
         return this;
     }
 
-    @Step("Открытая страница содержит заголовок поиска вакансий")
-    public Landing careerPageOpenCheck(){
-        careerPageFilterClass.shouldHave(text("Поиск Вакансий"));
 
-        return this;
-    }
 
     @Step("Проскролить до блока УСЛУГИ на главной")
     public Landing scrollToServicesBlock(){
@@ -163,7 +157,7 @@ public class Landing {
         return this;
     }
 
-    @Step("Футер содержит ссылку на телеграм")
+    @Step("Футер содержит ссылку на VK")
     public  Landing vkLinkCheck(){
         vkButton.shouldBe(clickable);
 

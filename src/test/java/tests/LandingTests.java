@@ -3,12 +3,14 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.Career;
 import pages.Landing;
 
 @Tag("landingTests")
 public class LandingTests extends TestBase {
 
     Landing landing = new Landing();
+    Career career  = new Career();
 
     @DisplayName("Названия кнопок навигации соответствуют документации")
     @Test
@@ -34,8 +36,8 @@ public class LandingTests extends TestBase {
     @DisplayName("Клик на кнопку меню КАРЬЕРА открывает страницу с поиском вакансий")
     @Test
     void clickOnMenuCareerButtonTest(){
-        landing.careerButtonClick()
-                .careerPageOpenCheck();
+        landing.careerButtonClick();
+        career.careerPageOpenCheck();
     }
 
     @DisplayName("В блоке услуг кнопка Подробнее кликабельна")
